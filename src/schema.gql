@@ -1,0 +1,43 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateProductInput {
+  zDescription: String!
+  zName: String!
+  zPrice: Float!
+  zState: String
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  createProduct(createProductInput: CreateProductInput!): Product!
+  removeProduct(id: ID!): Product
+  updateProduct(updateProductInput: UpdateProductInput!): Product!
+}
+
+type Product {
+  _id: ID!
+  zDate: DateTime!
+  zDescription: String!
+  zName: String!
+  zPrice: Float!
+  zState: String!
+}
+
+type Query {
+  product(id: ID!): Product!
+  products: [Product!]!
+}
+
+input UpdateProductInput {
+  _id: String!
+  zDescription: String
+  zName: String
+  zPrice: Float
+  zState: String
+}
