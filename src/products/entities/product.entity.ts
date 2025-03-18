@@ -27,5 +27,9 @@ export class Product {
   @Prop({ default:'activo' })
   @Field(() => String)
   zState: string;
+
+  @Prop({ default:'activo' })
+  @Field(() => String)
+  zNose: string;
 }
 export const ProductSchema = SchemaFactory.createForClass(Product);
