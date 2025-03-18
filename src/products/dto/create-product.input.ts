@@ -10,6 +10,12 @@ export class CreateProductInput {
   zName: string
 
   @Field(() => String)
+  @IsNotEmpty()
+  @IsString()
+  @MinLength(3)
+  zSubject: string
+
+  @Field(() => String)
   @IsString()
   zDescription: string;
 
