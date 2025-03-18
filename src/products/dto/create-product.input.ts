@@ -22,4 +22,9 @@ export class CreateProductInput {
   @IsOptional()
   @IsString()
   zState: string;
+  
+  @Field(() => String, { nullable:true })
+  @IsOptional()
+  @IsString()
+  zSexo: string;
 }
